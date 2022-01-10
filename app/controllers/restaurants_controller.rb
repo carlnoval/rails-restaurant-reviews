@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy, :chef]
 
   # GET /restaurants
   def index
@@ -9,6 +9,12 @@ class RestaurantsController < ApplicationController
   # manually created not by scaffold
   def top
     @restaurants = Restaurant.where(rating: 5)
+  end
+
+  # add chef method in before_action :set_restaurant
+  def chef
+    # @restaurant came from set_restaurant private method that was used in before_action
+    @chef_name = @restaurant.chef_name
   end
 
   # GET /restaurants/1
