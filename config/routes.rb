@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :restaurants do
-    # everything in collection starts with `/restaurants/...`
+    # in collection starts with `/restaurants/...`
+    # collection vs member `/restaurant/:id/...`
     collection do
       # top is an arbitrary value
       #           Prefix Verb   URI Pattern                     Controller#Action
