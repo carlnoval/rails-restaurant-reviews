@@ -1,0 +1,7 @@
+<%# http://localhost:3000/restaurants/102/reviews/new %>
+<%# form generates: action="/restaurants/102/reviews" %>
+<%# order matters, @restaurant must go first %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

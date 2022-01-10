@@ -15,5 +15,13 @@
   <%= @restaurant.rating %>
 </p>
 
+<% @restaurant.reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <hr>
+<% end %>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to 'Back', restaurants_path %> |
+<%# dynamic value in URI Pattern: /restaurants/:restaurant_id/reviews/new(.:format) %>
+<%# therefore @restaurant needs to be passed %>
+<%= link_to 'Add a new Review', new_restaurant_review_path(@restaurant) %>

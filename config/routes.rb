@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :restaurants do
-    # collection path   - /restaurants/...    - /restaurants/top
-    # member path       -/restaurant/:id/...  - /restaurants/:id/chef
+    # collection url-path   - /restaurants/...    - /restaurants/top
+    # member url-path       -/restaurant/:id/...  - /restaurants/:id/chef
     collection do
       # top is an arbitrary value
       #           Prefix Verb   URI Pattern                     Controller#Action
@@ -13,13 +13,22 @@ Rails.application.routes.draw do
       # ditional routes may also be added
     end
 
-    # collection path   - /restaurants/...    - /restaurants/top
-    # member path       -/restaurant/:id/...  - /restaurants/:id/chef
+    # collection url-path   - /restaurants/...    - /restaurants/top
+    # member url-path       -/restaurant/:id/...  - /restaurants/:id/chef
     member do
+      # chef is an arbitrary value
+      #          Prefix Verb   URI Pattern                                       Controller#Action
+      # chef_restaurant GET    /restaurants/:id/chef(.:format)                   restaurants#chef
       get :chef
 
       # ditional routes may also be added
     end
+
+    # nested `resources :restaurants do` because every review needs a restaurant_id coming from the url
+    #                 Prefix Verb   URI Pattern                     Controller#Action
+    #     restaurant_reviews POST   /restaurants/:restaurant_id/reviews(.:format)     reviews#create
+    #  new_restaurant_review GET    /restaurants/:restaurant_id/reviews/new(.:format) reviews#new
+    resources :reviews, only: [ :new, :create ]
   end 
 
   # For details on the DSL available within this file see https://guides.rubyonrails.org/routing.html
