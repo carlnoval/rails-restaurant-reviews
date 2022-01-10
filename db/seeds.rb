@@ -9,15 +9,14 @@
 puts "Cleaning database..."
 Restaurant.destroy_all
 puts "Database is now clean..."
-
 puts "Creating restaurants..."
-
 100.times do
   Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
-    stars: 
+    rating: rand(1..5)
   )
 end
-
-puts "Finished!"
+puts "Seeding finished..."
+puts "Restaurant with lowest id: #{Restaurant.first.id}"
+puts "Restaurant with highest id: #{Restaurant.last.id}"
