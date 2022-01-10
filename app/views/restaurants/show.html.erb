@@ -16,7 +16,9 @@
 </p>
 
 <% @restaurant.reviews.each do |review| %>
-  <p><%= review.content %></p>
+  <p><%= review.content %>
+    <%= link_to 'Delete', review_path(review), method: :delete, data: { confirm: 'Are you sure?' }%>
+  </p>
   <hr>
 <% end %>
 
