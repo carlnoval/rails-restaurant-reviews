@@ -6,6 +6,11 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+  # manually created not by scaffold
+  def top
+    @restaurants = Restaurant.where(rating: 5)
+  end
+
   # GET /restaurants/1
   def show
   end

@@ -1,0 +1,6 @@
+<%# http://localhost:3000/restaurants/top %>
+<h1>5 Rating Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <p><%= restaurant.name %>: <%= restaurant.rating %></p>
+<% end %>
