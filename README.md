@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project used scaffold which
+- generates files some are needed some are not needed
+-- migration file for create restaurant
+-- restaurant model
+-- routes
+-- controller which is alreay coded
+- not good for learning
+- only for lecture, challenges should not use this
+`rails g scaffold Restaurant name address stars:integer`
