@@ -16,7 +16,7 @@ class RestaurantsTest < ApplicationSystemTestCase
 
     fill_in "Address", with: @restaurant.address
     fill_in "Name", with: @restaurant.name
-    fill_in "Stars", with: @restaurant.stars
+    fill_in "Rating", with: @restaurant.rating
     click_on "Create Restaurant"
 
     assert_text "Restaurant was successfully created"
@@ -29,7 +29,7 @@ class RestaurantsTest < ApplicationSystemTestCase
 
     fill_in "Address", with: @restaurant.address
     fill_in "Name", with: @restaurant.name
-    fill_in "Stars", with: @restaurant.stars
+    fill_in "Rating", with: @restaurant.rating
     click_on "Update Restaurant"
 
     assert_text "Restaurant was successfully updated"

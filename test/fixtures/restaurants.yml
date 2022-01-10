@@ -3,9 +3,9 @@
 one:
   name: MyString
   address: MyString
-  stars: 1
+  rating: 1
 
 two:
   name: MyString
   address: MyString
-  stars: 1
+  rating: 1
