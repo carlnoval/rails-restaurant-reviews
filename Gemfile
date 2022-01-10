@@ -55,9 +55,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # commented out gems
+
+# if not commented then rails g scaffold would have made more unwanted files
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # in - group :development do
+
+# just pure annoying, for now
 # Display performance information such as SQL time and flame graphs for each request in your browser.
 # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
 # gem 'rack-mini-profiler', '~> 2.0'
